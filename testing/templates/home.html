@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <h1><a href="https://magiceden.io/marketplace/{{ response.0.collectionSymbol }}">{{ response.0.collectionSymbol }}</a> Collection nfts on Magic Eden</h1>
+    <ul>
+        {% for i in response %} 
+        <li>
+            <img src= {{i.image}} alt="" width="200" height="200">
+            <h5>image url: {{i.image}}</h5>
+            <h4>Price: {{i.price}} SOL</h4>
+            <h4>Owner: {{i.seller}} </h4>
+            
+            
+        </li>
+        {% endfor %}
+        </ul>
+</body>
+</html>
